@@ -4,13 +4,13 @@ type Params = {
   };
 };
 
-// export async function generateStaticParams() {
-//   // Liệt kê tất cả slug bạn muốn build sẵn
-//   return [
-//     { slug: "hello-world" },
-//     { slug: "another-post" },
-//   ];
-// }
+export async function generateStaticParams() {
+  // Liệt kê tất cả slug bạn muốn build sẵn
+  return [
+    { slug: "hello-world" },
+    { slug: "another-post" },
+  ];
+}
 
 
 export async function generateMetadata({ params }: Params) {
@@ -18,5 +18,5 @@ export async function generateMetadata({ params }: Params) {
 }
 
 export default function Page({ params }: Params) {
-  return <h1>Slug : {params.slug}</h1>
+  return <h1>Slug: {params.slug}</h1>
 }
